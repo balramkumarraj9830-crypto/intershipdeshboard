@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshboard </title>
+
+    <!-- Tailwind css v4 Brower  -->
+    <link rel="stylesheet" href="./output/style.css">
+
+    <!-- --font osum cdn link --- -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="font-inter bg-white overflow-x-hidden relative">
+    <!-- ----aside sidebar -- -->
+    <aside id="sidebar"
+        class="w-72 border-r bg-white border-gray-200 flex flex-col justify-between fixed lg:fixed lg:left-0 lg:top-0 h-screen z-30 shrink-0 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        <!-- --logo & Close Button for mobile -- -->
+        <div class="p-8 flex items-center justify-between">
+            <a href="#" class="text-blue2 font-bold text-[22px] leading-[32px] tracking-[-0.6px] uppercase">Text<span
+                    class="text-blue8">Sense</span></a>
+            <!-- Mobile Close Button -->
+            <button id="sidebar-close" class="lg:hidden text-gray hover:text-black p-2 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="px-4 overflow-y-auto flex-1">
+
+            <ul>
+                <li class="mb-1">
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white7 text-blue1 font-semibold text-[16px] leading-[24px] tracking-[-0.39px]">
+                        <img src="./image/aside1.png" alt="aside dashboard" loading="lazy"> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray hover:bg-white7 font-medium text-[16px] leading-[24px] tracking-[0.1%]">
+                        <img src="./image/aside2.png" alt="aside submit" loading="lazy"> <span>Submit
+                            Feedback</span>
+                    </a>
+                </li>
+                <li class="mb-1"> <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray hover:bg-white7 font-medium text-[16px] leading-[24px] tracking-[0.1%]">
+                        <img src="./image/aside3.png" alt="aside feedback" loading="lazy"><span>Feedback
+                            History</span>
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray hover:bg-white7 font-medium text-[16px] leading-[24px] tracking-[0.1%]">
+                        <img src="./image/aside4.png" alt="aside Analytics" loading="lazy"><span>Analytics</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="pt-8 px-4">
+                <span class="text-xs font-bold uppercase tracking-[1.1px] text-gray1">Account</span>
+            </div>
+
+            <a href="#"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray hover:bg-white7 font-medium text-[16px] leading-[24px]">
+                <img src="./image/aside5.png" alt="profile img " loading="lazy">
+                <span>Profile</span>
+            </a>
+
+
+            <a href="#"
+                class="flex items-center justify-between px-4 py-3 rounded-xl text-gray hover:bg-white7 font-medium ">
+                <div class="flex gap-3">
+                    <img src="./image/aside6.png" alt="notification" loading="lazy">
+                    <span class="text-[16px] leading-[24px] tracking-[-0.29%]">Notifications</span>
+                </div>
+
+                <span class="bg-red1 text-white text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+            </a>
+        </nav>
+        <!-- --- pro card -- -->
+        <div class="p-6">
+            <div class="bg-blue5 text-white p-5 rounded-2xl relative overflow-hidden">
+
+                <h4 class="font-bold text-sm mb-1 leading-[21px]">Pro Plan</h4>
+                <p class="text-xs text-white/60 mb-3 leading-[18px] tracking-[0.29%]">12,400 / 50,000 credits</p>
+
+
+                <div class="bg-white/10 h-1.5 rounded-full overflow-hidden mb-4">
+                    <div class="bg-green h-full w-1/4 rounded-full"></div>
+                </div>
+
+                <!-- <a href="#"
+                        class="w-[100%] bg-white text-blue5 text-xs font-bold py-2 rounded-lg leading-[18px] tracking-[0.39%] hover:bg-gray-100 transition">Upgrade
+                        Now</a> -->
+
+                <a href="#"
+                    class=" bg-white hover:bg-indigo-700 text-blue5 font-bold  py-2 px-8  rounded-lg leading-[18px] tracking-[0.39%] items-center ">
+                    Upgrade Now
+                </a>
+
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Top Header c (Fixed on top) -->
+    <header
+        class="h-20 bg-white/80 backdrop-blur-md px-4 lg:px-10 flex items-center justify-between fixed top-0 right-0 left-0 lg:left-72 z-20 border-b border-gray-200">
+
+        <div class="flex items-center gap-3">
+            <!-- Sidebar Toggler Button for Mobile/Tablet -->
+            <button id="sidebar-toggle" class="lg:hidden text-gray text-xl p-2 focus:outline-none hover:text-blue1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="flex items-center gap-4 px-2 lg:px-4 py-2 rounded-lg w-full  md:w-96">
+                <i class="fa-solid fa-magnifying-glass text-gray1"></i>
+
+                <input type="text" placeholder="Search feedback, insights or topics..."
+                    class=" text-sm outline-none w-full  text-gray1 text-[15px] bg-transparent " />
+
+
+            </div>
+        </div>
+
+
+        <div class="flex items-center gap-6">
+            <div
+                class="hidden md:flex items-center gap-2 bg-slate-100 border border-gray-200 px-3 py-1.5 rounded-full text-xs font-medium text-blue4">
+                <span class="w-2 h-2 rounded-full bg-green "></span>
+                <span class=" leading-[19.5px] tracking-[-0.49%]">System Active</span>
+            </div>
+
+            <div class="pl-3 lg:pl-6 flex items-center gap-3 border-l-2 border-white4">
+                <div class="text-right hidden sm:block">
+                    <p class="text-sm font-bold text-black4 leading-[21px] tracking-[0.2%]">Alex Rivers</p>
+                    <p class="text-xs text-gray leading-[18px] ">CX Manager</p>
+                </div>
+                <img src="./image/profile_img.png" alt="profile img " loading="lazy">
+            </div>
+        </div>
+    </header>
+    <!-- --main contact --- -->
+
+    <!-- Dashboard Content Container (Added pt-20 so content doesn't hide under fixed header) -->
+    <main class=" bg-white9   lg:ml-72 p-6 lg:p-10 pt-26 lg:pt-28">
+        <!-- Welcome Section c-->
+
+        <section class="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-4 ">
+            <div class="">
+                <h1 class="text-[32px] font-bold  text-black2  leading-[48px] tracking-[0.1%]">Feedback Overview
+                </h1>
+                <p class="text-[16px] leading-[24px] text-gray">Welcome back! Here's what's happening with your
+                    customer signals
+                    today.
+                </p>
+            </div>
+            <div class="">
+
+                <a href="#"
+                    class="bg-blue1 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-indigo-600/20 flex items-center gap-3 transition">
+                    <i class="fa-solid fa-plus"></i><span class="">Submit New Feedback</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Metric Cards Row c-->
+        <section class="mb-10 ">
+            <div
+                class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap gap-6 drop-shadow-[0_8px_10.2px_rgba(0,0,0,0.25)]">
+                <!-- Stat Card 1 -->
+                <div
+                    class="bg-white p-6 pb-13 rounded-3xl border border-gray-200 shadow-sm shadow-white4 flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-1/4 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="metric-icon-box bg-light-purple">
+                            <img src="./image/feedback1.png" alt="feedback img 1" loading="lazy">
+                        </div>
+                        <span
+                            class="bg-green2 text-green1 text-xs font-bold px-2.5 py-1 rounded-[4px] leading-[18px]">+12.5%</span>
+                    </div>
+                    <div class="">
+                        <span class="text-sm font-medium text-gray leading-[21px]">Total Analyzed</span>
+                        <h2 class="text-[28px] leading-[42px] font-bold text-blue2">24,892</h2>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div
+                    class="bg-white p-6 pb-13 rounded-3xl border border-gray-200 shadow-sm shadow-white4 flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-1/4 hover:-translate-y-2">
+                    <div class=" flex items-center justify-between">
+                        <div class="">
+                            <img src="./image/feedback2.png" alt="smile " loading="lazy">
+                        </div>
+                        <div class="">
+                            <img src="./image/Container.png" alt="avrage" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-sm font-medium text-gray leading-[21px]">Avg. Sentiment</span>
+                        <div class="flex items-baseline gap-2 mt-1">
+                            <h2 class="text-2xl font-bold text-gray-900">84%</h2>
+                            <span class="text-sm font-medium text-gray leading-[21px] tracking-[1.37%] ">Score</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div
+                    class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm shadow-white4 flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-1/4 hover:-translate-y-2">
+                    <div class="flex items-center justify-between">
+                        <div class="">
+                            <img src="./image/feedback1.png" alt="feedback1 " loading="lazy">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="text-sm font-medium text-gray leading-[21px]">Top Keyword</span>
+                        <h2 class="text-[28px] leading-[42px] font-bold text-blue2">"UI Polish"</h2>
+                        <div class="flex gap-2 mt-2">
+                            <span
+                                class="bg-white6 text-gray text-[11px] px-2 py-0.5 rounded-full leading-[16.5px] tracking-[1.76%]">Fast</span>
+                            <span
+                                class="bg-white6 text-gray text-[11px] px-2 py-0.5 rounded-full leading-[16.5px] tracking-[1.76%]">Stable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div
+                    class="bg-white p-6 pb-13 rounded-3xl border border-gray-200 shadow-sm shadow-white4 flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-1/4 hover:-translate-y-2">
+                    <div class="flex items-center justify-between">
+                        <div class="">
+                            <img src="./image/feedback4.png" alt="feedback img" loading="lazy">
+                        </div>
+                        <span class="text-red font-bold text-xs leading-[19.5px] tracking-[0.59%]">Urgent</span>
+                    </div>
+                    <div class="">
+                        <span class="text-sm font-medium text-gray leading-[21px]">Pending Reviews</span>
+                        <h2 class="text-[28px] leading-[42px] font-bold text-blue2">142</h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Charts and Topics Row c-->
+        <section class="mb-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sentiment Trend Chart Box -->
+                <div class="bg-white p-8 rounded-[32px] border border-gray-200 shadow-xl flex-1 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="text-xl font-bold text-black4 leading-[30px] tracking-[-0.29%]">Sentiment
+                            Trend
+                        </h3>
+                        <div class="flex gap-2">
+
+                            <a href="#"
+                                class="px-4 py-2 text-xs font-bold text-gray rounded-lg leading-[19.5px] tracking-[3.03%] hover:bg-blue1">Week</a>
+
+                            <a href="#"
+                                class="px-4 py-2 text-xs font-bold bg-blue1 text-white rounded-lg shadow-sm  leading-[19.5px] tracking-[1.37%]">Month</a>
+
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <img src="./image/sentiment_trend.png" alt="Sentiment trend" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Topic Discovery Box -->
+                <div
+                    class="bg-white p-5 rounded-[32px] border border-gray-200 shadow-xl w-full lg:w-96 shrink-0 hover:-translate-y-2">
+                    <h3 class="text-xl font-bold text-black4 mb-4 leading-[30px]">Topic Discovery</h3>
+
+                    <div class="mb-3 bg-white8 p-4 rounded-2xl border border-gray-100 hover:bg-white7">
+                        <div
+                            class="mb-[3px] flex justify-between items-center text-xs font-bold uppercase leading-[18px]">
+                            <span class=" text-gray1  tracking-[0.6px]">Emerging</span>
+                            <span class="text-red1"><i class="fa-solid fa-arrow-up"></i>
+                                140%</span>
+                        </div>
+                        <h4 class="text-[16px] font-bold text-black4 mb-[3px] pt-1 leading-[24px]">Mobile Logout
+                        </h4>
+                        <p class="text-xs text-gray leading-[19.5px]">Users reporting unexpected session
+                            timeouts on
+                            iOS.
+                        </p>
+                    </div>
+
+                    <div class="mb-3 bg-white8 p-4 rounded-2xl border border-gray-100 hover:bg-white7">
+                        <div
+                            class="mb-[3px] flex justify-between items-center text-xs font-bold  uppercase leading-[18px] ">
+                            <span class=" text-gray1  tracking-[0.6px]">Top Delight</span>
+                            <span class="text-green flex gap-1"> <img src="./image/positive.png" alt="smile">92%</span>
+                        </div>
+                        <h4 class=" mb-[3px] text-[16px] font-bold text-black4 pt-1 leading-[24px]">Onboarding
+                            Flow
+                        </h4>
+                        <p class="text-xs text-gray leading-[19.5px]">New users love the guided tutorial
+                            experience.
+                        </p>
+                    </div>
+
+                    <div class="mb-3 bg-white8 p-4 rounded-2xl border border-gray-100 hover:bg-white7">
+                        <div
+                            class="mb-[3px] flex justify-between items-center text-xs font-bold  uppercase  leading-[18px]">
+                            <span class=" text-gray1  tracking-[0.6px] ">Consistent</span>
+                            <span class="text-blue">Stable</span>
+                        </div>
+                        <h4 class="mb-[3px] text-[16px] font-bold text-black4 pt-1 leading-[24px]">Search
+                            Accuracy
+                        </h4>
+                        <p class="text-xs text-gray leading-[19.5px]">Internal search performance remains high.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Signals Table Section -->
+        <section
+            class="bg-white rounded-3xl border border-gray-200  overflow-hidden shadow-[10px_10px_10px_0px_rgba(0,0,0,0.15)] hover:-translate-y-2">
+            <div class="">
+                <div class="p-8 border-b border-gray-200 flex items-center justify-between">
+                    <h3 class="text-xl font-bold text-black4 leading-[30px] tracking-[0.2%]">Recent Signals</h3>
+                    <a href="#" class="text-sm font-bold text-blue1 hover:underline">View All History</a>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[700px]">
+                        <thead>
+                            <tr
+                                class="bg-white8 text-gray1 text-xs font-bold uppercase tracking-wider border-b border-gray-200">
+                                <th class="py-4 px-8">Feedback Source</th>
+                                <th class="py-4 px-8">Snippet</th>
+                                <th class="py-4 px-8">Sentiment</th>
+                                <th class="py-4 px-8">Confidence</th>
+                                <th class="py-4 px-8 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr class="gap-8 hover:bg-white7">
+
+                                <td class="">
+                                    <div class="py-5 px-8 flex items-center gap-3">
+                                        <div class="">
+                                            <img src="./image/recent1.png" alt=" intercom chat " loading="lazy">
+                                        </div>
+                                        <div class="">
+                                            <strong class="font-bold text-blue2">Intercom Chat</strong>
+                                            <p class="text-xs text-gray">2 mins ago</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="py-5 px-8 text-blue7 ">"The new interface is incredibly
+                                        intuitive
+                                        and fast..."</span></td>
+                                <td class="py-5 px-8"><span
+                                        class=" bg-white1 text-green1 font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1.5">
+                                        <img src="./image/positive.png" alt="positative img" loading="lazy">
+                                        Positive</span>
+                                </td>
+                                <td class="py-5 px-8">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-16 bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-blue1 h-full w-[94%]"></div>
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-500">94%</span>
+                                    </div>
+                                </td>
+                                <td class="py-5 px-8 text-right">
+
+                                    <a href="#"
+                                        class="border border-gray-200 text-blue1 font-bold text-xs px-4 py-2 rounded-lg hover:bg-blue-200 transition">
+                                        Details</a>
+
+                                </td>
+                            </tr>
+
+                            <tr class="gap-8 hover:bg-white7">
+                                <td class="">
+                                    <div class="py-5 px-8 flex items-center gap-3">
+                                        <div class="">
+                                            <img src="./image/recent2.png" alt="aap store" loading="lazy">
+                                        </div>
+                                        <div class="">
+                                            <strong class="font-bold text-blue2">App Store</strong>
+                                            <p class="text-xs text-gray">1 hour ago</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="py-5 px-8 text-blue7">"Since the latest update, I keep getting
+                                        logged out when I switch apps."</span></td>
+                                <td class="py-5 px-8"><span
+                                        class="bg-white2 text-red1 font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1.5">
+                                        <img src="./image/negative.png" alt="negative img ">
+                                        Negative</span></td>
+                                <td class="py-5 px-8">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-16 bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-blue1 h-full w-[88%]"></div>
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-500">88%</span>
+                                    </div>
+                                </td>
+                                <td class="py-5 px-8 text-right">
+
+                                    <a href="#"
+                                        class="border border-gray-200 text-blue1 font-bold text-xs px-4 py-2 rounded-lg hover:bg-blue-200 transition">
+                                        Details</a>
+
+                                </td>
+                            </tr>
+
+                            <tr class="gap-8 hover:bg-white7">
+                                <td class="">
+                                    <div class="py-5 px-8 flex items-center gap-3">
+                                        <div class="">
+                                            <img src="./image/recent3.png" alt="ticket img" loading="lazy">
+                                        </div>
+                                        <div class="">
+                                            <strong class="font-bold text-blue2">Zendesk Ticket</strong>
+                                            <p class="text-xs text-gray">4 hours ago</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="py-5 px-8 text-blue7">"Could we get a bulk export feature for
+                                        the
+                                        analytics page? Thanks!"</span></td>
+                                <td class="py-5 px-8"><span
+                                        class="bg-white3 text-blue font-bold text-xs px-3 py-1 rounded-full flex items-center gap-1.5">
+                                        <img src="./image/neutral.png" alt="neutral img" loading="lazy">
+                                        Neutral</span></td>
+                                <td class="py-5 px-8">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-16 bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                                            <div class="bg-blue1 h-full w-[91%]"></div>
+                                        </div>
+                                        <span class="text-xs font-medium text-gray-500">91%</span>
+                                    </div>
+                                </td>
+                                <td class="py-5 px-8 text-right">
+
+                                    <a href="#"
+                                        class="border border-gray-200 text-blue1 font-bold text-xs px-4 py-2 rounded-lg hover:bg-blue-200 transition">
+                                        Details</a>
+
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/script1.js"></script>
+</body>
+
+</html>
